@@ -7,6 +7,6 @@ RUN apt-get -y update \
 WORKDIR app
 COPY requirements.txt /app/requirements.txt
 RUN pip install --upgrade pip setuptools wheel \
-&& pip install -r /app/requirements.txt
+&& pip install --no-cache-dir -r /app/requirements.txt
 
 COPY . /app
